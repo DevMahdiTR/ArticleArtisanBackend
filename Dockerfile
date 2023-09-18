@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/elearning-0.0.1-SNAPSHOT.jar elearning.jar
+COPY --from=build /target/e-learning-0.0.1-SNAPSHOT.jar e-learning.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","elearning.jar"]
+ENTRYPOINT ["java","-jar","e-learning.jar"]
