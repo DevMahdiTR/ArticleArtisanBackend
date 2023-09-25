@@ -83,7 +83,6 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ResponseEntity<CustomResponseList<ArticleDTO>> fetchAllArticles(final long pageNumber)
     {
-
         final Pageable pageable = PageRequest.of((int) pageNumber - 1, 10);
         final List<ArticleDTO> articleDTOFullList = articleRepository.fetchAllArticles(pageable).stream().map(articleDTOMapper).toList();
         if(articleDTOFullList.isEmpty() && pageNumber > 1)

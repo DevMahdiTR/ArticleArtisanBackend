@@ -15,9 +15,9 @@ spring:
       max-request-size: 30MB
       max-file-size: 30MB
   datasource:
-    url: jdbc:postgresql://containers-us-west-114.railway.app:7381/railway
+    url: jdbc:postgresql://containers-us-west-145.railway.app:6264/railway
     username: postgres
-    password: 1rmsRCiTQjByuVaOyCCn
+    password: l8aKegpueEksAvLk4iOm
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

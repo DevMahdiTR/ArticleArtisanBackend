@@ -67,7 +67,7 @@ public class FileServiceImpl implements  FileService{
         byte[] file = Files.readAllBytes(new File(filePath).toPath());
         HttpHeaders headers = new HttpHeaders();
         String contentType = determineContentType(filePath);
-        headers.setContentDispositionFormData("attachment", fileData.getFilePath().toString());
+        headers.setContentDispositionFormData("attachment", fileData.getFilePath());
         headers.setContentType(MediaType.parseMediaType(contentType));
 
         return new ResponseEntity<>(file, headers, HttpStatus.OK);
