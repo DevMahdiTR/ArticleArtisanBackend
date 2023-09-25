@@ -43,7 +43,7 @@ public class FileServiceImpl implements  FileService{
         fileDataRepository.deleteFileDataById(fileId);
     }
 
-    private final String  FILE_SYSTEM_PATH= Paths.get("").toAbsolutePath().resolve("src").resolve("main").resolve("resources").resolve("FileSystem").toString() + "/";
+    private final String  FILE_SYSTEM_PATH= Paths.get("").toAbsolutePath().resolve("src").resolve("main").resolve("resources") + "/";
 
     @Override
     public FileData processUploadedFile(@NotNull final MultipartFile file) throws IOException, IOException {
