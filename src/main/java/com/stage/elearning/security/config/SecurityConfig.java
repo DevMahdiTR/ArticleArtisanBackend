@@ -87,7 +87,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://ruspina.netlify.app" ,"https://6512cf56f0246a0007810c52--ruspina.netlify.app"));
+        configuration.setAllowedOrigins(List.of("https://ruspina.netlify.app" ,"https://6512cf56f0246a0007810c52--ruspina.netlify.app", "http://localhost:3000"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);
